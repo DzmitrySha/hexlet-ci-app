@@ -8,6 +8,7 @@ jobs:
         with:
           node-version: '14'
           cache: npm
+          cache-dependency-path: package-lock.json,yarn.lock
       - run: npm ci
       - run: npm test
       - uses: actions/checkout@master
