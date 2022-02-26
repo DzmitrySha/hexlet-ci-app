@@ -15,9 +15,9 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm test
-      - uses: actions/checkout@snyk-check
+      - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@snyk-check
+        uses: snyk/actions/node@master
         env:
           SNYK_HEXLET_CI_APP: ${{ secrets.SNYK_HEXLET_CI_APP }}
           
