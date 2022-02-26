@@ -13,11 +13,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-      - run: npm ci
-      - run: npm test
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
           SNYK_HEXLET_CI_APP: ${{ secrets.SNYK_HEXLET_CI_APP }}
-          
