@@ -19,5 +19,5 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@main
         env:
-          SNYK_TOKEN: ${{ SNYK_HEXLET_CI_APP.SNYK_TOKEN }}
+          SNYK_HEXLET_CI_APP: ${{ secrets.SNYK_HEXLET_CI_APP }}
           
