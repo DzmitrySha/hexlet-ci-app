@@ -1,0 +1,14 @@
+name: CI-push-test
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run setup
+        run: make setup
+      - name: Run test
+        run: |
+          make test,
+          make lint
